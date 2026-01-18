@@ -1,0 +1,91 @@
+criteria 1: value
+
+Enter the size of array : 5
+
+Enter the data in this format => (weight, value)
+
+Enter data : 5 30
+Enter data : 10 20
+Enter data : 20 100
+Enter data : 30 90
+Enter data : 40 160
+Enter capacity : 60
+
+Enter choice:
+1) take by value
+2) take by weight
+3) take by profit
+
+choice : 1
+
+(40, 160), (20, 100), (30, 90), (5, 30), (10, 20), 
+
+weight -> value
+40 -> 160
+20 -> 100
+
+The total value: 260
+
+
+
+criteria 2: weight
+
+Enter the size of array : 5
+
+Enter the data in this format => (weight, value)
+
+Enter data : 
+5 30
+Enter data : 10 20
+Enter data : 20 100
+Enter data : 30 90
+Enter data : 40 160 
+Enter capacity : 60
+
+Enter choice:
+1) take by value
+2) take by weight
+3) take by profit
+
+choice : 2
+
+(5, 30), (10, 20), (20, 100), (30, 90), (40, 160), 
+
+weight -> value
+5 -> 30
+10 -> 20
+20 -> 100
+25 -> 75
+
+The total value: 225
+
+
+
+criteria 3: profit
+
+Enter the size of array : 5
+
+Enter the data in this format => (weight, value)
+
+Enter data : 5 30
+Enter data : 10 20
+Enter data : 20 100
+Enter data : 30 90
+Enter data : 40 160
+Enter capacity : 60
+
+Enter choice:
+1) take by value
+2) take by weight
+3) take by profit
+
+choice : 3
+
+(5, 30), (20, 100), (40, 160), (30, 90), (10, 20), 
+
+weight -> value
+5 -> 30
+20 -> 100
+35 -> 140
+
+The total value: 270

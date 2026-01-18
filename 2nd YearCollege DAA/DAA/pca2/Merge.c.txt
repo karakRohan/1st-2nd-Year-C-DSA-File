@@ -1,0 +1,72 @@
+// MARGE SORT
+
+#include<stdio.h>
+#include<conio.h>
+
+void sort_display(int a[],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+}
+void merge(int a[],int lower, int mid, int upper)
+{
+	int L[100],R[100],i,j,k,n1,n2;
+	n1= mid-lower+1;
+	n2= upper-mid;
+	for(i=0;i<n1;i++)
+	{
+		L[i]=a[lower+i];
+	}
+	L[i]=5000;
+	for(j=0;j<n2;j++)
+	{
+		R[j]=a[mid+1+j];
+	}
+	R[j]=5000;
+	i=0;
+	j=0;
+	k=0;
+	for(k=lower;k<=upper;k++)
+	{
+		if(L[i]<R[j])
+		{
+			a[k]=L[i];
+			i++;
+		}
+		else
+		{
+			a[k]=R[j];
+			j++;
+		}
+	}
+}
+
+void merge_sort(int a[], int lower, int upper)
+{
+	int mid;
+	if(lower<upper)
+	{
+	    mid=(lower+upper)/2;
+		merge_sort(a,lower,mid);
+		merge_sort(a,mid+1,upper);
+		merge(a,lower,mid,upper);		
+	}
+}
+
+void main()
+{
+	int a[100],i,j,n;
+	printf("Arrey size::");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Sorting element [%d]:",i+1);
+		scanf("%d",&a[i]);
+	}
+	merge_sort(a,0,n-1);
+	printf("After applying merge sort; the sorting list is::\n");
+	sort_display(a,n);
+}
